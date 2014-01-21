@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="title_activity_sign_up">Create an account</string>
+	<string name="title_activity_intro_sign_up">Sign Up</string>
+	
+	<string name="text_better_together">It\'s better together.</string>
+    <string name="text_link_login_facebook"> <u>Login with Facebook</u>. </string>
+</resources>

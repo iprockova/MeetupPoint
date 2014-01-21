@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpIntroActivity">
+    
+ 	<TextView
+             android:id="@+id/textView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="80dp"
+             android:text="@string/text_get_started"
+             android:textColor="@color/black" />
+ 	
+ 	<TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:textColor="@color/black"
+                android:text="@string/text_login_facebook"/>
+   
+    
+    <Button
+			    android:id="@+id/btnFacebookLogin"
+			    android:layout_width="200dp"
+			    android:layout_height="40dp"
+			    android:layout_centerHorizontal="true"
+			    android:layout_below="@id/textView2"
+			    android:layout_marginTop="30dp"
+			    android:background="@drawable/custom_fb_button"
+			    android:drawableLeft="@drawable/fb_button_icon"
+			    android:text="@string/signin_facebook" 
+			    android:textSize="14sp"
+			    android:textColor="@color/foggy_white"
+			    style="?android:attr/borderlessButtonStyle"
+			    android:onClick="facebookLogin" /> 
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginBottom="30dp" >
+
+
+         <TextView
+            android:id="@+id/textNoFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_dont_have_fb"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        
+         <TextView
+			    android:id="@+id/textSignUp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@id/textNoFacebook"
+			    android:paddingBottom="10dp"
+			    android:text="@string/link"
+			    android:textColor="@color/black"
+			    android:textSize="13sp" /> 
+       
+    </RelativeLayout> 
+		
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/custom_background" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+ 
+        <!--  Header Starts-->
+	<!--	<LinearLayout android:id="@+id/header"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@layout/header_gradient"
+		    android:paddingTop="5dip"
+  			android:paddingBottom="5dip">
+		        
+		        <ImageView android:src="@drawable/ic_action_logo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="10dip"/>
+		       
+		</LinearLayout>-->
+		<!--  Header Ends -->
+
+		<LinearLayout
+		    android:id="@+id/footer"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentLeft="true"
+		    android:paddingBottom="50dp"
+		    android:paddingLeft="35dp"
+		    android:paddingRight="35dp" >
+
+		  <!--  <Button
+		        android:id="@+id/btnFacebookLogin"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="20dp"
+		        android:layout_marginLeft="10dp"
+		        android:background="@drawable/custom_fb_button"
+		        android:text="@string/signin_facebook" 
+		        style="?android:attr/borderlessButtonStyle"/>  --> 
+
+		    <LinearLayout
+		        android:id="@+id/register"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+
+		        <Button
+		            android:id="@+id/btnLogin"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="2"
+		            android:layout_marginLeft="10dp"
+		            android:background="@drawable/custom_red_button"
+		            android:text="@string/login" 
+		            android:onClick="login" 
+		            style="?android:attr/borderlessButtonStyle"/>
+		        <TextView
+		            android:id="@+id/txtOr"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+		            android:layout_marginLeft="4dp"
+		            android:layout_marginRight="4dp"
+		            android:text="@string/or"
+		            android:textColor="@color/foggy_white"
+		            android:textSize="20dp"
+		            />
+
+		        <Button
+		            android:id="@+id/btnSingUp"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="2"
+		            android:background="@drawable/custom_red_button"
+		            android:text="@string/signup" 
+		            android:onClick="signUp" 
+		            style="?android:attr/borderlessButtonStyle"/>
+		    </LinearLayout>
+		</LinearLayout>
+
+		<RelativeLayout
+		    android:id="@+id/body"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentTop="true"
+		    android:layout_marginTop="42dp"
+		    android:orientation="vertical" >
+
+		    <ImageView
+		        android:id="@+id/imageView1"
+		        android:layout_width="180dp"
+		        android:layout_height="180dp"
+		        android:layout_alignParentTop="true"
+		        android:layout_centerHorizontal="true"
+		        android:src="@drawable/main_logo" />
+		</RelativeLayout>
+ 
+  	</RelativeLayout>
+
+</LinearLayout>

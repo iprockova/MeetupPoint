@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.meetuppoint"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="18" />
+
+    <!-- Google Maps Android API requires OpenGL ES version 2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+
+        <!-- Transparent Activity -->
+        <activity
+            android:name="com.example.meetuppoint.activities.TransparentActivity"
+            android:label="@string/title_activity_initial"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoDisplay" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main Activity -->
+        <activity
+            android:name="com.example.meetuppoint.activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
+        </activity>
+
+        <!-- Login Activity -->
+        <activity
+            android:name="com.example.meetuppoint.activities.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName="com.example.meetuppoint.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.meetuppoint.MainActivity" />
+        </activity>
+
+        <!-- SignUpIntro Activity -->
+        <activity
+            android:name="com.example.meetuppoint.activities.SignUpIntroActivity"
+            android:label="@string/title_activity_intro_sign_up"
+            android:parentActivityName="com.example.meetuppoint.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+
+        <!-- SignUp Activity -->
+        <activity
+            android:name="com.example.meetuppoint.activities.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName="com.example.meetuppoint.activities.SignUpIntroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
+            android:windowSoftInputMode="adjustPan" >
+
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.meetuppoint.MainActivity" />
+        </activity>
+
+        <!-- CreateEvent Activity -->
+        <activity
+            android:name="com.example.meetuppoint.activities.CreateEventActivity"
+            android:label="@string/title_activity_new_event"
+            android:parentActivityName="com.example.meetuppoint.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+
+        <!-- Location Activity -->
+        <activity
+            android:name="com.example.meetuppoint.activities.LocationActivity"
+            android:label="@string/title_activity_location"
+            android:theme="@style/CustomActionBarTheme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- Facebook Application ID -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <!-- Facebook Login Activity -->
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.meetuppoint.DatePickerFragment"
+            android:label="@string/title_activity_date_picker_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.meetuppoint.TimePickerFragment"
+            android:label="@string/title_activity_time_picker_fragment" >
+        </activity>
+
+        <!-- Google Play Version -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Google Maps API key -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/API_KEY" />
+
+        <activity
+            android:name="com.example.meetuppoint.GooglePlayService"
+            android:label="@string/title_activity_verify_google_play_service" >
+        </activity>
+        <activity
+            android:name="com.example.meetuppoint.ErrorDialogFragment"
+            android:label="@string/title_activity_error_dialog_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.meetuppoint.DownloadPlacesTask"
+            android:label="@string/title_activity_download_places_task" >
+        </activity>
+        <activity
+            android:name="com.example.meetuppoint.DownloadDataHttp"
+            android:label="@string/title_activity_download_data_http" >
+        </activity>
+        <activity
+            android:name="com.example.meetuppoint.TestJsonActivity"
+            android:label="@string/title_activity_test_json" >
+        </activity>
+        <activity
+            android:name="com.example.meetuppoint.AutocompleteTask"
+            android:label="@string/title_activity_autocomplete_task" >
+        </activity>
+        <activity
+            android:name="com.example.meetuppoint.PlacesAutoCompleteAdapter"
+            android:label="@string/title_activity_places_auto_complete_adapter" >
+        </activity>
+    </application>
+
+</manifest>

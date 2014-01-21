@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    
+    
+    <!-- the theme applied to the application or activity -->
+    <style name="CustomActionBarTheme"
+           parent="@style/CustomTheme">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style> 
+    
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+           parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/custom_red_actionbar</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>
+        <item name="android:actionMenuTextColor">@color/foggy_white</item>
+    </style>
+    
+     <!-- ActionBar title text -->
+    <style name="MyActionBarTitleText"
+           parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/foggy_white</item>
+    </style>
+    
+    <!-- ActionBar tabs text styles -->
+    <style name="MyActionBarTabText"
+           parent="@android:style/Widget.Holo.ActionBar.TabText">
+        <item name="android:textColor">@color/foggy_white</item>
+    </style>
+    
+    <style name="CustomActionBarTheme_NoAppBar" parent="CustomActionBarTheme">
+    <item name="android:windowNoTitle">true</item>
+	</style>
+    
+   
+    
+</resources>
